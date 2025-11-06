@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kdebugsettings
 Summary:	Kdebugettings
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	8d4e2980440940ceefc7f16ec59fb926
+# Source0-md5:	968502cc92089de9a4eb70e3e974b286
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -85,9 +85,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.kdebugsettings.desktop
 %{_datadir}/qlogging-categories6/kde.renamecategories
 %{_datadir}/qlogging-categories6/kdebugsettings.categories
-%attr(755,root,root) %{_libdir}/libkdebugsettings.so.*.*
+%{_libdir}/libkdebugsettings.so.*.*
 %ghost %{_libdir}/libkdebugsettings.so.6
-%attr(755,root,root) %{_libdir}/libkdebugsettingscore.so.*.*
+%{_libdir}/libkdebugsettingscore.so.*.*
 %ghost %{_libdir}/libkdebugsettingscore.so.6
 %{_datadir}/metainfo/org.kde.kdebugsettings.appdata.xml
 %{_datadir}/kdebugsettings
